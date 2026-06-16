@@ -1,68 +1,24 @@
-# IMDb Movie Review Sentiment Analysis using Simple RNN
+# 🎬 IMDb Movie Review Sentiment Analysis using Simple RNN
 
-## 📌 Project Overview
+## 📌 Overview
 
-This project implements an end-to-end Deep Learning solution for sentiment analysis on movie reviews using a Simple Recurrent Neural Network (RNN). The model is trained on the IMDb Movie Reviews Dataset to classify reviews as either **Positive** or **Negative**.
+This project performs **binary sentiment classification** on movie reviews using a **Simple Recurrent Neural Network (Simple RNN)** built with TensorFlow/Keras.
 
-The project covers the complete Deep Learning workflow, including:
+The model predicts whether a movie review expresses a **Positive** or **Negative** sentiment.
 
-* Data preprocessing and feature engineering
-* Text tokenization and sequence padding
-* Word Embedding Layer
-* Simple RNN model training
-* Model evaluation
-* Streamlit web application
-* Deployment-ready pipeline
+A **Streamlit** web application is included for real-time predictions.
 
 ---
 
-## 🎯 Problem Statement
+## 🚀 Features
 
-Movie reviews contain valuable information about audience opinions. Manually analyzing thousands of reviews is time-consuming and inefficient.
-
-The objective of this project is to build a Deep Learning model capable of automatically determining whether a movie review expresses a positive or negative sentiment.
-
----
-
-## 📂 Dataset
-
-**Dataset:** IMDb Movie Reviews Dataset
-
-* Total Reviews: 50,000
-* Binary Sentiment Classification
-* Labels:
-
-  * Positive (1)
-  * Negative (0)
-
----
-
-## 🏗️ Project Architecture
-
-```text
-Input Review Text
-       │
-       ▼
-Text Preprocessing
-       │
-       ▼
-Tokenization & Padding
-       │
-       ▼
-Embedding Layer
-       │
-       ▼
-Simple RNN Layer
-       │
-       ▼
-Dense Layer
-       │
-       ▼
-Sigmoid Activation
-       │
-       ▼
-Sentiment Prediction
-```
+* IMDb Movie Review Sentiment Analysis
+* Text preprocessing using TextVectorization
+* Simple RNN Neural Network
+* Streamlit Web Application
+* Model saved in Keras format
+* Vocabulary saved separately
+* Real-time sentiment prediction
 
 ---
 
@@ -71,51 +27,105 @@ Sentiment Prediction
 * Python
 * TensorFlow
 * Keras
-* NumPy
-* Pandas
-* Matplotlib
-* Scikit-Learn
 * Streamlit
+* Pandas
+* NumPy
+* Scikit-learn
+
+---
+
+## 📂 Project Structure
+
+```
+IMDb-Sentiment-Analysis/
+│
+├── IMDB Dataset.csv
+├── train.py
+├── predict.py
+├── app.py
+├── imdb_model.keras
+├── vocab.pkl
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+## 📊 Dataset
+
+IMDb Dataset of 50K Movie Reviews
+
+* 50,000 movie reviews
+* Binary Sentiment Classification
+* Labels:
+
+  * Positive
+  * Negative
 
 ---
 
 ## 🧠 Model Architecture
 
-```python
-model = Sequential([
-    Embedding(input_dim=vocab_size,
-              output_dim=128,
-              input_length=max_length),
-
-    SimpleRNN(128),
-
-    Dense(1, activation='sigmoid')
-])
+```
+Input Review
+      │
+      ▼
+Text Vectorization
+      │
+      ▼
+Embedding Layer
+      │
+      ▼
+Simple RNN
+      │
+      ▼
+Dense Layer (Sigmoid)
+      │
+      ▼
+Sentiment Prediction
 ```
 
 ---
 
-## 🚀 How to Run the Project
+## ⚙️ Installation
 
-### 1. Clone the Repository
+Clone the repository
 
 ```bash
-git clone https://github.com/HumaimaRiaz47/IMDb-Movie-Review-Sentiment-Analysis-using-Simple-RNN.git
+git clone https://github.com/yourusername/IMDb-Sentiment-Analysis.git
 ```
 
-### 2. Install Dependencies
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Train the Model
+---
+
+## ▶️ Train the Model
 
 ```bash
 python train.py
 ```
 
-### 4. Run the Streamlit Application
+This generates:
+
+* imdb_model.keras
+* vocab.pkl
+
+---
+
+## ▶️ Predict Using Python
+
+```bash
+python predict.py
+```
+
+---
+
+## ▶️ Run Streamlit
 
 ```bash
 streamlit run app.py
@@ -123,68 +133,38 @@ streamlit run app.py
 
 ---
 
-## 📊 Sample Predictions
+## 📈 Sample Output
 
-### Positive Review
+**Review**
 
-**Input**
+> This movie was fantastic! The acting was amazing.
 
-```text
-This movie was absolutely amazing and the acting was brilliant.
+Prediction
+
 ```
-
-**Prediction**
-
-```text
-Positive Sentiment 😊
-```
-
-### Negative Review
-
-**Input**
-
-```text
-This was the worst movie I have ever watched.
-```
-
-**Prediction**
-
-```text
-Negative Sentiment 😞
+Positive 😊
+Score: 0.97
 ```
 
 ---
 
-## 🔮 Future Improvements
+## Demo
 
-* LSTM (Long Short-Term Memory)
-* GRU (Gated Recurrent Unit)
-* Bidirectional RNN
-* Attention Mechanisms
-* Transformer Models (BERT)
-* Hyperparameter Optimization
+<video controls src="20260616-1911-14.6500764.mp4" title="Title"></video>
 
----
-
-## 📚 Learning Outcomes
-
-This project helped in understanding:
-
-* Natural Language Processing (NLP)
-* Word Embeddings
-* Sequence Modeling
-* Recurrent Neural Networks (RNNs)
-* Deep Learning Model Deployment
-* Streamlit Application Development
-
----
-
-## 👩‍💻 Author
+## Author
 
 **Humaima Riaz**
 
-GitHub: https://github.com/HumaimaRiaz47
+Computer Systems Engineering Student
+
+Interested in:
+
+* Artificial Intelligence
+* Deep Learning
+* Natural Language Processing
+* Machine Learning
 
 ---
 
-⭐ If you found this project useful, consider giving it a star on GitHub!
+⭐ If you found this project useful, don't forget to star the repository!
