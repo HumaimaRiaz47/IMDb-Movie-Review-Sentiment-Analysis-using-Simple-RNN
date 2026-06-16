@@ -148,10 +148,9 @@ Score: 0.97
 
 ---
 
-🎥 Demo
+🎥 Snapshots
 
-https://github.com/user-attachments/assets/your-video-id
-
+![alt text](image.png)
 ## Author
 
 **Humaima Riaz**
