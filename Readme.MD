@@ -148,9 +148,9 @@ Score: 0.97
 
 ---
 
-## Demo
+🎥 Demo
 
-<video controls src="20260616-1911-14.6500764.mp4" title="Title"></video>
+https://github.com/user-attachments/assets/your-video-id
 
 ## Author
 
